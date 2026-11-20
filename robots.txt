@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jollymix.co.uk/sitemap.xml
