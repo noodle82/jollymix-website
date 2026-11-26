@@ -3450,7 +3450,7 @@ html[data-daily-review] #jm-mystery .jm-puzzle .jm-primary {
   color:#fff7e5;
   box-shadow:none;
 }
-html[data-daily-review] #jm-mystery .jm-puzzle .jm-feedback { color:inherit; margin:12px 0 0; }
+html[data-daily-review] #jm-mystery .jm-puzzle:not(:where(.jm-puzzle-confirmed)) .jm-feedback { color:inherit; margin:12px 0 0; }
 
 html[data-daily-review="word-slips"] #jm-mystery .jm-puzzle {
   --line:#9eab88;
@@ -4413,9 +4413,6 @@ html[data-daily-review] #jm-mystery .jm-puzzle h3 { color:inherit; }
   clip-path:polygon(0 74%,12% 75%,18% 80%,27% 82%,28% 89%,41% 91%,52% 100%,0 100%);
   animation:jmx-2026-bite 150ms ease-out;
 }
-#jm-mystery .jm-puzzle-confirmed .jm-feedback {
-  padding:8px 12px; border-radius:4px; color:#e2f5d5; background:#284936; font-weight:700;
-}
 #jm-mystery .jm-puzzle-confirmed button:disabled { opacity:.78; }
 #jm-mystery .jm-result-average { margin-top:0; }
 #jm-mystery .jm-desk-panel[data-material="download"] { width:min(94vw,480px); }
@@ -4438,10 +4435,19 @@ html[data-daily-review] #jm-mystery .jm-puzzle h3 { color:inherit; }
   border:1px solid #d3a46c; border-radius:10px; background:#422820; color:#fff0cb;
   box-shadow:0 2px 6px #1d0c08aa; min-width:44px; min-height:44px;
 }
-#jm-mystery .jm-puzzle.jm-puzzle-confirmed .jm-feedback { color:#fff; background:#244c36; }
-#jm-mystery .jm-puzzle.jm-puzzle-incorrect .jm-feedback { color:#fff; background:#712e33; }
-#jm-mystery .jm-puzzle .jm-word-choice.is-right { color:#173f27; background:#d9f2d5; border-color:#4f8b59; }
-#jm-mystery .jm-puzzle .jm-word-choice.is-incorrect { color:#60202a; background:#f7d5d7; border-color:#a15359; }
+#jm-mystery .jm-puzzle.jm-puzzle-confirmed .jm-feedback {
+  padding:10px 12px; border:1px solid #36694c; border-radius:5px;
+  color:#fff; background:#1e432f; font-weight:750; line-height:1.4;
+}
+#jm-mystery .jm-puzzle.jm-puzzle-incorrect .jm-feedback {
+  color:#fff; background:#6e2831; border-color:#8b424a;
+}
+html[data-daily-review] #jm-mystery .jm-puzzle .jm-word-choice.is-right {
+  color:#173f27; background:#d9f2d5; border-color:#4f8b59; opacity:1;
+}
+html[data-daily-review] #jm-mystery .jm-puzzle .jm-word-choice.is-incorrect {
+  color:#60202a; background:#f7d5d7; border-color:#a15359; opacity:1;
+}
 #jm-mystery .jm-calculator-question { position:absolute; right:3%; top:5%; color:#f9dfad; font-weight:700; }
 #jm-mystery .jm-calculator.is-turned .jm-calculator-question { transform:rotate(180deg); }
 
