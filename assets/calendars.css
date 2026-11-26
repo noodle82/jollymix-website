@@ -1,0 +1,39 @@
+.web-welcome {
+  padding-block:clamp(27px,4vw,57px) clamp(38px,6vw,82px);
+}
+.web-welcome > h1 {
+  max-width:900px; margin-bottom:13px;
+  font-size:clamp(2.5rem,5vw,5.05rem);
+  text-wrap:balance;
+}
+.web-welcome > p { margin-bottom:clamp(22px,2.6vw,32px); color:var(--muted); font-size:clamp(1rem,1.65vw,1.27rem); }
+.calendar-choices { display:grid; grid-template-columns:1fr 1fr; gap:clamp(16px,2.2vw,30px); align-items:stretch; }
+.calendar-choice {
+  display:flex; flex-direction:column; overflow:hidden;
+  border:1px solid #fff2cf30; border-radius:18px;
+  background:#10283f; box-shadow:0 17px 38px #02081445;
+}
+.challenge-choice { background:linear-gradient(145deg,#431f2b,#24172c 77%); border-color:#d7ae6c65; }
+.choice-art { order:-1; width:100%; aspect-ratio:2.08; object-fit:cover; border-bottom:1px solid #efc98742; }
+.challenge-choice .choice-art { object-position:center top; }
+.village-choice .choice-art { object-position:center top; }
+.choice-copy {
+  display:flex; flex:1; flex-direction:column; align-items:flex-start;
+  padding:clamp(19px,3vw,34px);
+}
+.choice-copy h2 { font-size:clamp(1.85rem,3.35vw,3rem); margin-bottom:12px; text-wrap:balance; }
+.choice-copy > p { color:#f1e6e0; margin-bottom:12px; line-height:1.58; font-size:clamp(.95rem,1.3vw,1.05rem); }
+.village-choice .choice-copy > p { color:#d3dfec; }
+.choice-copy strong { color:var(--cream); }
+.choice-actions { display:flex; flex-wrap:wrap; align-items:center; column-gap:17px; row-gap:11px; padding-top:9px; margin-top:auto; }
+.choice-actions .button { gap:10px; min-height:47px; padding:10px 16px; text-align:center; }
+.challenge-choice .primary { color:#321d1c; background:#f7d385; box-shadow:none; }
+.challenge-choice .primary:hover { background:#ffe6a7; }
+.challenge-choice .text-link span { color:#f2cb84; }
+.choice-actions .text-link { padding:7px 0; }
+@media(max-width:760px){
+  .calendar-choices { grid-template-columns:1fr; gap:22px; }
+  .calendar-choice { border-radius:14px; }
+  .choice-art { order:0; border-bottom:0; border-top:1px solid #efc98742; }
+  .choice-copy { padding:18px; }
+}
