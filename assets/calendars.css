@@ -37,3 +37,13 @@
   .choice-art { order:0; border-bottom:0; border-top:1px solid #efc98742; }
   .choice-copy { padding:18px; }
 }
+
+.choice-copy > .choice-audience {
+  margin:0 0 6px;
+  color:#f7d385;
+  font-size:.83rem;
+  font-weight:750;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+.village-choice .choice-copy > .choice-audience { color:#b2ddd8; }
