@@ -1,0 +1,6 @@
+/* Keep modal controls inside both the visual viewport and the dialog edge.
+   Larger tablet layouts retain their existing close-button placement. */
+function placePhoneClose(){const vv=visualViewport,w=vv?.width||innerWidth,h=vv?.height||innerHeight,phone=Math.min(innerWidth,innerHeight)<=600&&Math.max(innerWidth,innerHeight)<=1100;modal.classList.toggle('phone-modal-safe',phone);if(!phone||!modal.open){modal.style.removeProperty('--phone-close-right');modal.style.removeProperty('--phone-close-top');return}const rect=modal.getBoundingClientRect(),right=Math.min((vv?.offsetLeft||0)+w,rect.right),padding=18;modal.style.setProperty('--phone-close-top',((vv?.offsetTop||0)+16)+'px');modal.style.setProperty('--phone-close-right',Math.max(26,innerWidth-right+padding)+'px')}
+const phoneShowModalBefore=showModal;showModal=function(html){phoneShowModalBefore(html);placePhoneClose();requestAnimationFrame(placePhoneClose)};
+const phoneModalObserver=new ResizeObserver(placePhoneClose);phoneModalObserver.observe(modal);
+addEventListener('resize',placePhoneClose);visualViewport?.addEventListener('resize',placePhoneClose);visualViewport?.addEventListener('scroll',placePhoneClose);modal.addEventListener('scroll',placePhoneClose,{passive:true});
