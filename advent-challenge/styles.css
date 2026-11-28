@@ -1,0 +1,45 @@
+:root{color-scheme:dark;--ink:#1e100e;--panel:#30201a;--cream:#ffedc6;--gold:#efc780;--body:#efdfca;--rule:#be956453;font:100%/1.55 system-ui,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 78% 14%,#55261a,transparent 51rem),var(--ink);color:var(--body)}
+a{color:inherit;text-underline-offset:.25em}
+a:focus-visible{outline:3px solid #77d9d1;outline-offset:5px}
+img{display:block;max-width:100%;height:auto}
+.wrap{width:min(92%,81rem);margin-inline:auto}
+.skip{position:absolute;top:.5rem;left:.75rem;z-index:5;padding:.45rem .85rem;background:#fff4d7;color:#312014;transform:translateY(-150%)}
+.skip:focus{transform:none}
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.55rem 0 1.35rem;border-bottom:1px solid var(--rule)}
+.brand{display:block;width:9.75rem;flex:none}
+.masthead nav,footer nav{display:flex;flex-wrap:wrap;gap:.4rem 1.45rem}
+.masthead a,footer a{color:var(--body);text-decoration:none}
+.masthead nav a:hover,footer a:hover{text-decoration:underline}
+.hero{display:grid;grid-template-columns:minmax(18rem,.82fr) minmax(0,1.18fr);align-items:center;gap:clamp(1.5rem,4vw,4.35rem);padding-block:clamp(2.5rem,6vw,6rem)}
+.label{margin:0 0 .75rem;color:var(--gold);text-transform:uppercase;font-weight:750;letter-spacing:.11em;font-size:.875rem}
+h1,h2{color:var(--cream);font-family:Georgia,serif;line-height:.98;text-wrap:balance}
+h1{font-size:clamp(3.55rem,6.4vw,6.7rem);letter-spacing:-.065em;margin:0 0 1.25rem}
+h1 span{display:block;margin-top:.24em;line-height:1;font-size:.51em;color:var(--gold);letter-spacing:-.04em;white-space:nowrap}
+.hero-copy>p:not(.label):not(.details){font-size:clamp(1.0625rem,1.5vw,1.3rem);line-height:1.5;margin:0 0 1.5rem;max-width:35rem}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.25rem}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:3rem;padding:.75rem 1.12rem;border-radius:.4rem;text-decoration:none;background:#ecbf78;color:#291810;font-weight:750}
+.button:hover{background:#ffe4ab}
+.sample-link,.feature-copy a{color:var(--gold);font-weight:650}
+.details{font-size:.9rem;margin:1.15rem 0 0;color:#dec6a8}
+.hero-art{width:100%;border-radius:.85rem;box-shadow:0 1.25rem 3rem #100604b0;outline:1px solid #b58d5480;outline-offset:.2rem}
+.features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1.25rem,3vw,2.5rem);padding-block:1.5rem 4rem}
+.feature{min-width:0;overflow:hidden;border:1px solid var(--rule);border-radius:.75rem;background:var(--panel)}
+.feature>img{width:100%;aspect-ratio:1.2;object-fit:cover;object-position:center top}
+.feature:nth-child(2)>img{object-fit:contain;background:#342118}
+.feature-copy{padding:1.4rem clamp(1.2rem,3vw,2rem) 1.6rem}
+h2{font-size:clamp(1.8rem,3.2vw,2.65rem);letter-spacing:-.04em;margin:0 0 .65rem}
+.feature-copy p,.family-copy p:not(.label){margin:0 0 .85rem}
+.family-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);overflow:hidden;background:#10273b;border:1px solid #6196a976;border-radius:.75rem}
+.family-panel>img{width:100%;height:100%;object-fit:cover}
+.family-copy{align-self:center;padding:clamp(1.35rem,4.3vw,3.5rem);color:#e4edf3}
+.family-copy .label{color:#9df0db}
+.family-copy .button{margin-top:.3rem;background:#a4efdd;color:#102c37}
+.family-copy .button:hover{background:#c8fff1}
+footer.wrap{margin-top:3.6rem;border-top:1px solid var(--rule);padding-block:1.25rem 1.8rem;display:flex;justify-content:space-between;gap:1rem}
+@media(max-width:55rem){.hero{grid-template-columns:1fr;gap:2rem}.hero-copy{max-width:44rem}h1{font-size:clamp(3.55rem,10vw,5.6rem)}.hero-art{max-height:34rem;object-fit:cover}.features{padding-bottom:2.75rem}}
+@media(max-width:36rem){.masthead{padding-block:1rem}.masthead nav{gap:.3rem .85rem;font-size:.875rem}.brand{width:7.55rem}.hero{padding:2.25rem 0}.features,.family-panel{grid-template-columns:1fr}.family-panel>img{aspect-ratio:1.9;height:auto}.features{gap:1.15rem}.family-copy{padding-block:1.35rem}footer.wrap{margin-top:2.3rem;font-size:.9rem}footer nav{gap:.45rem .85rem}}
+
+
+
